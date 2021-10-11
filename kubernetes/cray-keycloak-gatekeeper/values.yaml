@@ -40,5 +40,13 @@ certificateSecretName: "keycloak-gatekeeper-certs"
 # Passed as the value to the upstream-response-header-timeout option, "the timeout placed on the response header for upstream"`
 upstreamResponseHeaderTimeout: "5m"
 
+resources:
+  requests:
+    memory: "100Mi"
+    cpu: "500m"
+  limits:
+    memory: "500Mi"
+    cpu: "2"
+
 # Passed as the value to the server-write-timeout option, "the server write timeout on the http server"
 serverWriteTimeout: "5m"

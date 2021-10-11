@@ -100,12 +100,7 @@ spec:
           successThreshold: 1
           timeoutSeconds: 1
         resources:
-          requests:
-            memory: "20Mi"
-            cpu: "100m"
-          limits:
-            memory: "100Mi"
-            cpu: "2"
+          {{- toYaml .Values.resources | nindent 10 }}
       volumes:
       - name: server-tls
         secret:
